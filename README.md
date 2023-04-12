@@ -2,14 +2,14 @@
 ## Project Overview
 A startup company wants to analyze the data they've been collecting on songs and user activity on their new music streaming app especilly interested in understanding what songs users are listening to. Currently, they have a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
-This project is to create a Postgres database with tables designed to optimize queries on song play analysis from json files. First, create a database schema with Postgres  to define fact and dimension tables for a star schema for a particular analytic focus. Second , build an ETL pipeline using Python that transfers data from json files in two local directories into these tables in Postgres using Python and SQL.
+This project is to create a Cassandra database with tables designed to optimize queries on song play analysis from json files. First, create a database schema with Cassandra to define fact and dimension tables for a star schema for a particular analytic focus. Second , build an ETL pipeline using Python that transfers data from json files in two local directories into these tables in Cassandra using Python and Cassandra SQL.
 
 
 ### Datasets: event_data
 event_data: The directory of CSV files partitioned by date. Here are examples of filepaths to two files in the dataset:
 ``code
-event_data/2018-11-08-events.csv
-event_data/2018-11-09-events.csv
+event_data/[*date*]-events.csv
+event_data/[*date*]-events.csv
 ``
 The event_datafile_new.csv contains the following columns:  
 * artist(text)
